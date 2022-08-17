@@ -1,0 +1,30 @@
+@import '../../../assets/variables.scss';
+
+.list-component {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.list {
+  width: 58%;
+  height: 100%;
+  background: rgba($background_color_container, 0.28);
+  border-right: 1px solid $border_color;
+  padding: 52px 64px 0 63px;
+}
+
+.list__title {
+  font-weight: 500;
+  font-size: 28px;
+  margin-bottom: 64px;
+}
+
+.app-filters {
+  width: 28%;
+}
+
+.app-pagination {
+  width: 50%;
+}

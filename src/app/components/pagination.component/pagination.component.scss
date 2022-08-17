@@ -1,0 +1,36 @@
+@import '../../../assets/variables.scss';
+
+.pagination-component {
+  display: flex;
+
+  p {
+    font-style: normal;
+    font-weight: 500;
+    margin-right: 22px;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+}
+
+i {
+  border: solid $arrow_color;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-bottom: 1px;
+
+  &:hover {
+    border: solid $act_collor;
+    border-width: 0 2px 2px 0;
+  }
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}

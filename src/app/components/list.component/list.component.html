@@ -1,0 +1,10 @@
+<div class="list-component">
+  <div class="list">
+    <h2 class="list__title">Search repos</h2>
+    <app-list-item *ngFor="let repo of repos" [repo]="repo"></app-list-item>
+    <app-pagination></app-pagination>
+  </div>
+  <div class="app-filters">
+    <app-filters></app-filters>
+  </div>
+</div>

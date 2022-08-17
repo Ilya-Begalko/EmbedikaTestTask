@@ -1,0 +1,9 @@
+<div class="pagination-component">
+  <p>
+    <i class="arrow left" (click)="showPreviousPage()" *ngIf="currentPage - 1 > 1"></i>
+  </p>
+  <p>{{currentPage - 1}}</p>
+  <p>
+    <i class="arrow right" (click)="showNextPage()" *ngIf="currentReposArrLength === 5"></i>
+  </p>
+</div>

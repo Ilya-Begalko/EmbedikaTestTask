@@ -1,0 +1,41 @@
+<div class="card-item">
+  <a class="back-link" href="#" routerLink="">
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M9.66667 4.41665L2.5675 4.41665L5.82834 1.15581L5 0.333313L0.333336 4.99998L5 9.66665L5.8225 8.84415L2.5675 5.58331L9.66667 5.58331V4.41665Z"
+        fill="#2962FF" />
+    </svg>
+    <p>Вернуться</p>
+  </a>
+  <h3 class="card-item__title">{{repoDetails.name}}</h3>
+
+  <div class="card-item__types">
+    <div class="item__type">
+      <p>Private</p>
+      <span href="#">{{repoDetails.isPrivate}}</span>
+    </div>
+    <div class="item__type">
+      <p>Watchers</p>
+      <span href="#">{{repoDetails.watchers_count}}</span>
+    </div>
+    <div class="item__type">
+      <p>Subscribers</p>
+      <span href="#">{{repoDetails.subscribers_count}}</span>
+    </div>
+    <div class="item__type">
+      <p>Default branch</p>
+      <span href="#">{{repoDetails.default_branch}}</span>
+    </div>
+    <div class="item__type">
+      <p>Open issues</p>
+      <span href="#">{{repoDetails.open_issues_count}}</span>
+    </div>
+    <div class="item__type">
+      <p>Forks</p>
+      <span href="#">{{repoDetails.forks_count}}</span>
+    </div>
+    <div class="item__type">
+      <a href={{repoDetails.html_url}}>Посмотреть репозиторий</a>
+    </div>
+  </div>
+</div>

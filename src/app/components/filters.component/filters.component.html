@@ -1,0 +1,49 @@
+<div class="filters-component">
+  <h3 class="filters__title">Фильтры</h3>
+  <div class="text-input" [ngClass]="{'filled-input':query.searchQueryString}">
+    <label for="title" class="label">Название</label>
+    <input type="text" class="input" name="title" id="title" [(ngModel)]="query.searchQueryString"
+      (keydown.enter)="getRepos()">
+  </div>
+  <div class="checkbox-group">
+    <div class="text-input check-languages-input" [ngClass]="{'filled-input':languagesInputValue}">
+      <label for="languages" class="label">Языки</label>
+      <input type="text" class="input" (click)="toggleHide()" readonly value={{languagesInputValue}} name="languages"
+        id="languages">
+    </div>
+    <ul [ngClass]="{'hidden':isHidden}">
+      <li>
+        <input class="custom-checkbox" id="Python-checkbox" type="checkbox" [(ngModel)]="query.languagesChecked.python"
+          (change)="setLanguagesInputValue()">
+        <label for="Python-checkbox"> Python </label>
+      </li>
+      <li>
+        <input class="custom-checkbox" id="javascript-checkbox" type="checkbox"
+          [(ngModel)]="query.languagesChecked.javascript" (change)="setLanguagesInputValue()">
+        <label for="javascript-checkbox"> Javascript </label>
+      </li>
+      <li>
+        <input class="custom-checkbox" id="java-checkbox" type="checkbox" [(ngModel)]="query.languagesChecked.java"
+          (change)="setLanguagesInputValue()">
+        <label for="java-checkbox"> Java </label>
+      </li>
+      <li>
+        <input class="custom-checkbox" id="php-checkbox" type="checkbox" [(ngModel)]="query.languagesChecked.php"
+          (change)="setLanguagesInputValue()">
+        <label for="php-checkbox"> PHP </label>
+      </li>
+      <li>
+        <input class="custom-checkbox" id="assembly-checkbox" type="checkbox"
+          [(ngModel)]="query.languagesChecked.assembly" (change)="setLanguagesInputValue()">
+        <label for="assembly-checkbox"> Assembly </label>
+      </li>
+    </ul>
+  </div>
+  <div class="radio-group">
+    <ul>
+      <h3>Зеркало</h3>
+      <li><input type="radio" name="mirror" [(ngModel)]="query.isMirror" value="true">Да</li>
+      <li><input type="radio" name="mirror" [(ngModel)]="query.isMirror" value="false">Нет</li>
+    </ul>
+  </div>
+</div>
